@@ -21,7 +21,6 @@ var stream = fs.createWriteStream('images.csv');
             fileType = "directory";
           }
           var absoluteURL = (url + fileName);
-          csvInput = (filePermission + "," + absoluteURL + "," + fileType) + "\n";
           //still in the each loop - writes each result to the csv file in a stream. Formatted by csvWriter npm.
           writer.write([filePermission, absoluteURL, fileType])
         });
